@@ -36,7 +36,7 @@ public class Ex02_List extends HttpServlet {
 			data += "<tr>";
 			data += "	<td>" + c.getId() + "</td>";
 			data += "	<td>" + c.getName() + "</td>";
-			data += "	<td>" + c.getCountrycode() + "</td>";
+			data += "	<td>" + c.getCountryCode() + "</td>";
 			data += "	<td>" + c.getDistrict() + "</td>";
 			data += "	<td>" + c.getPopulation() + "</td>";
 			data += "</tr>";
