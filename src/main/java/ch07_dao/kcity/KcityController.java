@@ -7,13 +7,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 
 import ch07_dao.City;
 import ch07_dao.CityDao;
 
-//@WebServlet("/ch07/kcity/*")
+
 @WebServlet({ "/ch07/kcity/list", "/ch07/kcity/insert", "/ch07/kcity/update", 
 			"/ch07/kcity/delete", "/ch07/kcity/wrong" })
 public class KcityController extends HttpServlet {
