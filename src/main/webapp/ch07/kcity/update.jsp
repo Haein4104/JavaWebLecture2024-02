@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,12 @@
 		<input type="text" name="id" value="${city.id}" disabled><br><br>
 		<input type="text" name="name" value="${city.name}"><br><br>
 		<input type="text" name="countryCode" value="${city.countryCode}"><br><br>
-		<input type="text" name="district" value="${city.district}"><br><br>
+		<!-- <input type="text" name="district" value="${city.district}"><br><br>  -->
+				<select name="district">
+			<c:forEach var="dist" items="${districts}">
+				<option value="${dist}" ${dist eq city.district ? "selected" : ""}>${dist}</option>
+			</c:forEach>
+		</select>
 		<input type="text" name="population" value="${city.population}"><br><br>
 		<input type="submit" value="제출">
 		
